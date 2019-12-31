@@ -17,8 +17,8 @@ if (argv.help || argv.h) {
   console.info('Usage:');
   console.info('  --host=<host>     Hostname for the UI; defaults to localhost');
   console.info('  --port=<port>     Port on which to serve UI; defaults to 3000');
-  console.info('  --api=<api URI>   URI to the Apigility Admin API; defaults to http://{host}/api');
-  console.info('  --doc=<doc URI>   URI to API documentation; defaults to http://{host}/apigility/documentation');
+  console.info('  --api=<api URI>   URI to the Laminas API Tools Admin API; defaults to http://{host}/api');
+  console.info('  --doc=<doc URI>   URI to API documentation; defaults to http://{host}/api-tools/documentation');
   console.info('  --src             Use the source folder instead of /dist');
   console.info('  --help or -h      This usage message');
   process.exit(0);
@@ -27,7 +27,7 @@ if (argv.help || argv.h) {
 var host = argv.host || 'localhost';
 var port = argv.port ? parseInt(argv.port) : 3000;
 var api  = argv.api  || 'http://' + host + ':8888/api';
-var docs = argv.doc  || 'http://' + host + ':8888/apigility/documentation';
+var docs = argv.doc  || 'http://' + host + ':8888/api-tools/documentation';
 var src  = argv.src  ? 'src' : 'dist';
 
 if (! validUrl.isUri(api)) {
