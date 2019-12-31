@@ -1,5 +1,5 @@
 <?php
-namespace ZF\Apigility\Admin\Ui;
+namespace Laminas\ApiTools\Admin\Ui;
 
 class Module
 {
