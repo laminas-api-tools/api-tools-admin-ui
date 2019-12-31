@@ -5,7 +5,7 @@ describe('XHR Service', function () {
   var httpBackend;
 
   beforeEach(function() {
-    module('apigility.service');
+    module('api-tools.service');
     module(function($provide) {
       $provide.value('agApiPath', 'http://localhost:8181/api');
     });
