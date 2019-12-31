@@ -1,6 +1,6 @@
 'use strict';
 
-/* Gruntfile for zf-apigility-admin-ui
+/* Gruntfile for api-tools-admin-ui
  *
  * Primary Targets:
  * - test: run karma tests
@@ -11,10 +11,10 @@
  *   - `--port` to specify a port to run the HTTP server on; if none is
  *     specified, 3000 is used.
  *   - `--api` to specify the URI to the API; uses
- *     http://localhost:9000/apigility/api if none is specified.
+ *     http://localhost:9000/api-tools/api if none is specified.
  *   - `--docs` to specify the URI to documentation (referenced in the
  *     documentation navigation item); uses
- *     http://localhost:9000/apigility/documentation if none is specified.
+ *     http://localhost:9000/api-tools/documentation if none is specified.
  *   - `--host` to specify the hostname to use; defaults to "localhost".
  * - default: runs jshint, tests, and build
  */
@@ -33,7 +33,7 @@ module.exports = function(grunt) {
   grunt.initConfig({
 
     // Project settings
-    apigility: {
+    api-tools: {
       dist: 'dist',
       ui: 'src'
     },
@@ -47,14 +47,14 @@ module.exports = function(grunt) {
       },
       livereload: {
         options: {
-          base: '<%= apigility.ui %>',
+          base: '<%= api-tools.ui %>',
           middleware: function (connect, options, middlewares) {
             middlewares = middlewares || [];
 
             var host = grunt.option('host') || 'localhost';
             var base = 'http://' + host + ':' + options.port + '/';
             var api  = grunt.option('api')  || 'http://' + host + ':9000/api';
-            var docs = grunt.option('docs') || 'http://' + host + ':9000/apigility/documentation';
+            var docs = grunt.option('docs') || 'http://' + host + ':9000/api-tools/documentation';
 
             var index = fs.readFileSync(options.base + '/index.html', { encoding: 'utf-8' });
             index = index.replace(/%BASE_HREF%/g, base);
@@ -86,7 +86,7 @@ module.exports = function(grunt) {
     // Watches files for changes and runs tasks based on the changed files
     watch: {
       js: {
-        files: ['<%= apigility.ui %>/apigility-ui/{,**/}*.js'],
+        files: ['<%= api-tools.ui %>/api-tools-ui/{,**/}*.js'],
         tasks: ['newer:jshint:all', 'karma']
       },
       jsTest: {
@@ -95,7 +95,7 @@ module.exports = function(grunt) {
       },
       /*
       less: {
-        files: ['<%= apigility.app %>/less/{,**<delete brackets and this message>/}*.less'],
+        files: ['<%= api-tools.app %>/less/{,**<delete brackets and this message>/}*.less'],
         tasks: ['less:server']
       },
       */
@@ -107,15 +107,15 @@ module.exports = function(grunt) {
           livereload: '<%= connect.options.livereload %>'
         },
         files: [
-          '<%= apigility.ui %>/{,**/}*.html',
-          '<%= apigility.ui %>/apigility-ui/css/{,**/}*.css',
-          '<%= apigility.ui %>/apigility-ui/img/{,**/}*',
-          '<%= apigility.ui %>/apigility-ui/{,**/}*.js'
+          '<%= api-tools.ui %>/{,**/}*.html',
+          '<%= api-tools.ui %>/api-tools-ui/css/{,**/}*.css',
+          '<%= api-tools.ui %>/api-tools-ui/img/{,**/}*',
+          '<%= api-tools.ui %>/api-tools-ui/{,**/}*.js'
         ]
       },
 
       html2js: {
-        files: ['<%= apigility.ui %>/apigility-ui/{,**/}*.html'],
+        files: ['<%= api-tools.ui %>/api-tools-ui/{,**/}*.html'],
         tasks: ['html2js']
       }
     },
@@ -125,11 +125,11 @@ module.exports = function(grunt) {
       options: {
         jshintrc: '.jshintrc',
         reporter: require('jshint-stylish'),
-        ignores: ['<%= apigility.ui %>/apigility-ui/templates.js'],
+        ignores: ['<%= api-tools.ui %>/api-tools-ui/templates.js'],
       },
       all: [
         'Gruntfile.js',
-        '<%= apigility.ui %>/apigility-ui/{,**/}*.js'
+        '<%= api-tools.ui %>/api-tools-ui/{,**/}*.js'
       ],
       test: {
         options: {
@@ -147,8 +147,8 @@ module.exports = function(grunt) {
           dot: true,
           src: [
             '.tmp',
-            '<%= apigility.dist %>/*',
-            '!<%= apigility.dist %>/.git*'
+            '<%= api-tools.dist %>/*',
+            '!<%= api-tools.dist %>/.git*'
           ]
         }]
       },
@@ -161,14 +161,14 @@ module.exports = function(grunt) {
       options: {
         // Adds additional paths for import (so can import bower_components as well)
         paths: [
-          '<%= apigility.app %>/less',
-          '<%= apigility.app %>/vendor'
+          '<%= api-tools.app %>/less',
+          '<%= api-tools.app %>/vendor'
         ]
       },
       server: {
         files: {
-          '<%= apigility.app %>/css/main.css': '<%= apigility.app %>/less/main.less',
-          '<%= apigility.app %>/css/vendor.css': '<%= apigility.app %>/less/vendor.less'
+          '<%= api-tools.app %>/css/main.css': '<%= api-tools.app %>/less/main.less',
+          '<%= api-tools.app %>/css/vendor.css': '<%= api-tools.app %>/less/vendor.less'
         },
         options: {
           cleancss: false
@@ -182,19 +182,19 @@ module.exports = function(grunt) {
     // concat, minify and revision files. Creates configurations in memory so
     // additional tasks can operate on them
     useminPrepare: {
-      html: '<%= apigility.dist %>/index.html',
+      html: '<%= api-tools.dist %>/index.html',
       options: {
-        dest: '<%= apigility.dist %>',
-        root: '<%= apigility.ui %>'
+        dest: '<%= api-tools.dist %>',
+        root: '<%= api-tools.ui %>'
       }
     },
 
     // Performs rewrites based on rev and the useminPrepare configuration
     usemin: {
-      html: ['<%= apigility.dist %>/{,**/}*.html'],
-      css: ['<%= apigility.dist %>/{,**/}*.css'],
+      html: ['<%= api-tools.dist %>/{,**/}*.html'],
+      css: ['<%= api-tools.dist %>/{,**/}*.css'],
       options: {
-        assetsDirs: ['<%= apigility.dist %>']
+        assetsDirs: ['<%= api-tools.dist %>']
       }
     },
 
@@ -212,9 +212,9 @@ module.exports = function(grunt) {
         },
         files: [{
           expand: true,
-          cwd: '<%= apigility.ui %>',
+          cwd: '<%= api-tools.ui %>',
           src: ['*.html', 'html/**/*.html'],
-          dest: '<%= apigility.dist %>'
+          dest: '<%= api-tools.dist %>'
         }]
       }
     },
@@ -226,20 +226,20 @@ module.exports = function(grunt) {
           {
             expand: true,
             dot: true,
-            cwd: '<%= apigility.ui %>',
-            dest: '<%= apigility.dist %>',
+            cwd: '<%= api-tools.ui %>',
+            dest: '<%= api-tools.dist %>',
             src: [
               'index.html',
               '*.{ico,png,txt}',
-              'apigility-ui/img/**'
+              'api-tools-ui/img/**'
             ]
           },
           {
             expand: true,
             dot: false,
             flatten: true,
-            cwd: '<%= apigility.ui %>',
-            dest: '<%= apigility.dist %>/apigility-ui/fonts',
+            cwd: '<%= api-tools.ui %>',
+            dest: '<%= api-tools.dist %>/api-tools-ui/fonts',
             src: [
               'vendor/bootstrap/dist/fonts/*.{eot,woff,ttf,svg}',
               'vendor/sass-bootstrap-glyphicons/fonts/*.{eot,woff,ttf,svg}'
@@ -275,18 +275,18 @@ module.exports = function(grunt) {
     //Collect all html views into single template
     html2js: {
       options: {
-        base: '<%= apigility.ui %>'
+        base: '<%= api-tools.ui %>'
       },
       main: {
-        src: ['<%= apigility.ui %>/apigility-ui/**/*.html'],
-        dest: '<%= apigility.ui %>/apigility-ui/templates.js'
+        src: ['<%= api-tools.ui %>/api-tools-ui/**/*.html'],
+        dest: '<%= api-tools.ui %>/api-tools-ui/templates.js'
       },
     },
 
     rev: {
       files: [
-        '<%= apigility.dist %>/apigility-ui/{,**/}*.css',
-        '<%= apigility.dist %>/apigility-ui/{,**/}*.js'
+        '<%= api-tools.dist %>/api-tools-ui/{,**/}*.css',
+        '<%= api-tools.dist %>/api-tools-ui/{,**/}*.js'
       ]
     }
   });
