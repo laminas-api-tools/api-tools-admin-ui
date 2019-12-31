@@ -1,17 +1,18 @@
 #!/usr/bin/env php
 <?php
+
 /**
  * Enable development or production usage
  *
  * Usage: ui-mode.php --dev|--production
  */
 
-use Zend\Console\Exception\RuntimeException;
-use Zend\Console\Getopt;
+use Laminas\Console\Exception\RuntimeException;
+use Laminas\Console\Getopt;
 
 chdir(__DIR__ . '/../');
 require_once 'vendor/autoload.php';
-$viewfile   = './view/zf-apigility-ui.phtml';
+$viewfile   = './view/api-tools-ui.phtml';
 $configfile = './config/module.config.php';
 
 $opts = new Getopt(array(
