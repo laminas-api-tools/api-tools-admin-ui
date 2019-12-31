@@ -9,7 +9,7 @@ return array(
     ),
     'view_manager' => array(
         'template_map' => array(
-            'zf/app/app' => __DIR__ . '/../view/zf-apigility-ui.phtml',
+            'laminas/app/app' => __DIR__ . '/../view/api-tools-ui.phtml',
         ),
     ),
 );
