@@ -8,7 +8,7 @@ describe('Sidebar service', function () {
 
   beforeEach(function(){
 
-    module("apigility.service");
+    module("api-tools.service");
 
     module(function($provide) {
       $provide.service('api', function(){
