@@ -15,7 +15,7 @@ var argv = minimist(process.argv.slice(2), {
 
 if (argv.help || argv.h) {
   console.info('Usage:');
-  console.info('  --api=<api URI>   URI to the Apigility Admin API');
+  console.info('  --api=<api URI>   URI to the Laminas API Tools Admin API');
   console.info('  --doc=<doc URI>   URI to API documentation');
   console.info('  --port=<port>     Port on which to serve UI; defaults to 3000');
   console.info('  --src             Use the src directory (instead of dist version)');
@@ -37,9 +37,9 @@ var api  = argv.api;
 var env  = argv.src ? 'src' : 'dist';
 var port = argv.port ? parseInt(argv.port) : 3000;
 var base = 'http://localhost:' + port;
-var doc  = argv.doc || '/apigility/documentation';
+var doc  = argv.doc || '/api-tools/documentation';
 
-var path  = __dirname + '/' + env + '/zf-apigility-admin';
+var path  = __dirname + '/' + env + '/api-tools-admin';
 var index = fs.readFileSync(path + '/index.html', { encoding: 'utf-8' });
 index = index.replace(/%BASE_HREF%/g, base);
 index = index.replace(/%API_BASE%/g, api);
