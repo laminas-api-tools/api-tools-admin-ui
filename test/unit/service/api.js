@@ -4,7 +4,7 @@ describe('API service', function () {
   var mockXhr = {};
 
   beforeEach(function(){
-    module("apigility.service");
+    module("api-tools.service");
 
     module(function($provide) {
       $provide.service('xhr', function(){
