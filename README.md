@@ -1,7 +1,7 @@
-Apigility Admin UI (develop branch)
+Laminas API Tools Admin UI (develop branch)
 ===================================
 
-This is the source code for the new Apigility Admin User Interface.
+This is the source code for the new Laminas API Tools Admin User Interface.
 We rewrote from scratch the UI in [AngularJS](https://angularjs.org/) with performance improvement and usability.
 
 We added some new features:
@@ -13,14 +13,14 @@ We added some new features:
 
 > **Note**
 >
-> To be able to run the new UI you need to use the **develop** branch of [zf-apigility-skeleton](https://github.com/zfcampus/zf-apigility-skeleton)
+> To be able to run the new UI you need to use the **develop** branch of [api-tools-skeleton](https://github.com/laminas-api-tools/api-tools-skeleton)
 > For instance, you can install the develop branch using composer:
 >
 > ```sh
-> composer create-project zfcampus/zf-apigility-skeleton apigility dev-develop
+> composer create-project laminas-api-tools/api-tools-skeleton api-tools dev-develop
 > ```
 >
-> This command install the zf-apigility-skeleton application in the apigility local folder. 
+> This command install the api-tools-skeleton application in the api-tools local folder. 
 
 
 Requirements
@@ -78,31 +78,31 @@ to run tests automatically as files are changed.
 Invoking the Admin
 ------------------
 
-There are three ways to invoke the Admin UI: as part of an Apigility project,
+There are three ways to invoke the Admin UI: as part of an Laminas API Tools project,
 standalone via [node](https://nodejs.org), or via source using grunt.
 
-### Via Apigility
+### Via Laminas API Tools
 
 Add the admin as a dev requirement to your project:
 
 ```console
-$ composer require-dev "zfcampus/zf-apigility-admin-ui:~1.0"
+$ composer require-dev "laminas-api-tools/api-tools-admin-ui:~1.0"
 ```
 
-and add the module `ZF\Apigility\Admin\Ui` to the list of modules in
+and add the module `Laminas\ApiTools\Admin\Ui` to the list of modules in
 `config/development.config.php.dist` (and potentially
 `config/development.config.php` if already in development mode.
 
-Navigating to the URI `/apigility/ui` in your Apigility application will now hit the UI.
+Navigating to the URI `/api-tools/ui` in your Laminas API Tools application will now hit the UI.
 
 ### Standalone
 
 The standalone method fires up a webserver using node. This method requires that
-you have a running Apigility Admin API and know the URL, and that that server is
-configured to enable CORS; see [the Apigility CORS
-documentation](https://apigility.org/documentation/recipes/allowing-request-from-other-domains)
+you have a running Laminas API Tools Admin API and know the URL, and that that server is
+configured to enable CORS; see [the Laminas API Tools CORS
+documentation](https://api-tools.getlaminas.org/documentation/recipes/allowing-request-from-other-domains)
 if you need help setting this aspect up. Make a note of the URI for your server;
-the API URI will be `<server>/apigility/api`.
+the API URI will be `<server>/api-tools/api`.
 
 Additionally, we recommend noting the URI to your API documentation, so that the
 navigation item can point to it.
@@ -110,7 +110,7 @@ navigation item can point to it.
 Fire up the admin UI using:
 
 ```console
-$ node index.js --src --api=<URI to Apigility Admin API (ends in /apigility/api)>
+$ node index.js --src --api=<URI to Laminas API Tools Admin API (ends in /api-tools/api)>
 ```
 
 (For help with options, see `node index.js -h`.)
@@ -128,7 +128,7 @@ The `grunt serve` command does several things:
 The grunt server runs in the same way as the standalone server: it accepts the same options, and has the same CORS limitations. As an example:
 
 ```console
-$ grunt serve --api=<URI to Apigility Admin API (ends in /apigility/api)> \
+$ grunt serve --api=<URI to Laminas API Tools Admin API (ends in /api-tools/api)> \
 > --doc=<URI to API documentation> --port=3001 --host=ag.dev
 ```
 
