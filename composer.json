@@ -44,6 +44,6 @@
         ]
     },
     "replace": {
-        "zfcampus/zf-apigility-admin-ui": "^1.3.9"
+        "zfcampus/zf-apigility-admin-ui": "^1.3.13"
     }
 }
