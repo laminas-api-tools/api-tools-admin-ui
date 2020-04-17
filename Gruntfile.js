@@ -33,7 +33,7 @@ module.exports = function(grunt) {
   grunt.initConfig({
 
     // Project settings
-    api-tools: {
+    api_tools: {
       dist: 'dist',
       ui: 'src'
     },
@@ -47,7 +47,7 @@ module.exports = function(grunt) {
       },
       livereload: {
         options: {
-          base: '<%= api-tools.ui %>',
+          base: '<%= api_tools.ui %>',
           middleware: function (connect, options, middlewares) {
             middlewares = middlewares || [];
 
@@ -86,7 +86,7 @@ module.exports = function(grunt) {
     // Watches files for changes and runs tasks based on the changed files
     watch: {
       js: {
-        files: ['<%= api-tools.ui %>/api-tools-ui/{,**/}*.js'],
+        files: ['<%= api_tools.ui %>/api-tools-ui/{,**/}*.js'],
         tasks: ['newer:jshint:all', 'karma']
       },
       jsTest: {
@@ -107,15 +107,15 @@ module.exports = function(grunt) {
           livereload: '<%= connect.options.livereload %>'
         },
         files: [
-          '<%= api-tools.ui %>/{,**/}*.html',
-          '<%= api-tools.ui %>/api-tools-ui/css/{,**/}*.css',
-          '<%= api-tools.ui %>/api-tools-ui/img/{,**/}*',
-          '<%= api-tools.ui %>/api-tools-ui/{,**/}*.js'
+          '<%= api_tools.ui %>/{,**/}*.html',
+          '<%= api_tools.ui %>/api-tools-ui/css/{,**/}*.css',
+          '<%= api_tools.ui %>/api-tools-ui/img/{,**/}*',
+          '<%= api_tools.ui %>/api-tools-ui/{,**/}*.js'
         ]
       },
 
       html2js: {
-        files: ['<%= api-tools.ui %>/api-tools-ui/{,**/}*.html'],
+        files: ['<%= api_tools.ui %>/api-tools-ui/{,**/}*.html'],
         tasks: ['html2js']
       }
     },
@@ -125,11 +125,11 @@ module.exports = function(grunt) {
       options: {
         jshintrc: '.jshintrc',
         reporter: require('jshint-stylish'),
-        ignores: ['<%= api-tools.ui %>/api-tools-ui/templates.js'],
+        ignores: ['<%= api_tools.ui %>/api-tools-ui/templates.js'],
       },
       all: [
         'Gruntfile.js',
-        '<%= api-tools.ui %>/api-tools-ui/{,**/}*.js'
+        '<%= api_tools.ui %>/api-tools-ui/{,**/}*.js'
       ],
       test: {
         options: {
@@ -147,8 +147,8 @@ module.exports = function(grunt) {
           dot: true,
           src: [
             '.tmp',
-            '<%= api-tools.dist %>/*',
-            '!<%= api-tools.dist %>/.git*'
+            '<%= api_tools.dist %>/*',
+            '!<%= api_tools.dist %>/.git*'
           ]
         }]
       },
@@ -182,19 +182,19 @@ module.exports = function(grunt) {
     // concat, minify and revision files. Creates configurations in memory so
     // additional tasks can operate on them
     useminPrepare: {
-      html: '<%= api-tools.dist %>/index.html',
+      html: '<%= api_tools.dist %>/index.html',
       options: {
-        dest: '<%= api-tools.dist %>',
-        root: '<%= api-tools.ui %>'
+        dest: '<%= api_tools.dist %>',
+        root: '<%= api_tools.ui %>'
       }
     },
 
     // Performs rewrites based on rev and the useminPrepare configuration
     usemin: {
-      html: ['<%= api-tools.dist %>/{,**/}*.html'],
-      css: ['<%= api-tools.dist %>/{,**/}*.css'],
+      html: ['<%= api_tools.dist %>/{,**/}*.html'],
+      css: ['<%= api_tools.dist %>/{,**/}*.css'],
       options: {
-        assetsDirs: ['<%= api-tools.dist %>']
+        assetsDirs: ['<%= api_tools.dist %>']
       }
     },
 
@@ -212,9 +212,9 @@ module.exports = function(grunt) {
         },
         files: [{
           expand: true,
-          cwd: '<%= api-tools.ui %>',
+          cwd: '<%= api_tools.ui %>',
           src: ['*.html', 'html/**/*.html'],
-          dest: '<%= api-tools.dist %>'
+          dest: '<%= api_tools.dist %>'
         }]
       }
     },
@@ -226,8 +226,8 @@ module.exports = function(grunt) {
           {
             expand: true,
             dot: true,
-            cwd: '<%= api-tools.ui %>',
-            dest: '<%= api-tools.dist %>',
+            cwd: '<%= api_tools.ui %>',
+            dest: '<%= api_tools.dist %>',
             src: [
               'index.html',
               '*.{ico,png,txt}',
@@ -238,8 +238,8 @@ module.exports = function(grunt) {
             expand: true,
             dot: false,
             flatten: true,
-            cwd: '<%= api-tools.ui %>',
-            dest: '<%= api-tools.dist %>/api-tools-ui/fonts',
+            cwd: '<%= api_tools.ui %>',
+            dest: '<%= api_tools.dist %>/api-tools-ui/fonts',
             src: [
               'vendor/bootstrap/dist/fonts/*.{eot,woff,woff2,ttf,svg}',
               'vendor/sass-bootstrap-glyphicons/fonts/*.{eot,woff,woff2,ttf,svg}'
@@ -275,18 +275,18 @@ module.exports = function(grunt) {
     //Collect all html views into single template
     html2js: {
       options: {
-        base: '<%= api-tools.ui %>'
+        base: '<%= api_tools.ui %>'
       },
       main: {
-        src: ['<%= api-tools.ui %>/api-tools-ui/**/*.html'],
-        dest: '<%= api-tools.ui %>/api-tools-ui/templates.js'
+        src: ['<%= api_tools.ui %>/api-tools-ui/**/*.html'],
+        dest: '<%= api_tools.ui %>/api-tools-ui/templates.js'
       },
     },
 
     rev: {
       files: [
-        '<%= api-tools.dist %>/api-tools-ui/{,**/}*.css',
-        '<%= api-tools.dist %>/api-tools-ui/{,**/}*.js'
+        '<%= api_tools.dist %>/api-tools-ui/{,**/}*.css',
+        '<%= api_tools.dist %>/api-tools-ui/{,**/}*.js'
       ]
     }
   });
