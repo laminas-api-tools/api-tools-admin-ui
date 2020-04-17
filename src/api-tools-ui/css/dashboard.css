@@ -28,15 +28,19 @@ body {
  */
 .navbar-fixed-top {
   box-sizing: border-box;
-  border: 1px;
-  border-color: #428bca;
-  background: #105d8a;
+  border-bottom: 2px solid #E5007D;
+  background: #013755;
   height: 70px;
 }
 
 .navbar-fixed-top a {
   font-size: 18px;
   color: white;
+}
+
+.navbar-fixed-top .btn-info {
+  background-color: #337ab7;
+  border-color: #337ab7;
 }
 
 .header-toggle {
@@ -88,15 +92,20 @@ body {
 
 .logo {
   display: block;
-  margin: 5px 0 5px 20px;
   max-height: 70px;
   width: 320px;
+  text-align: center;
+  overflow: hidden;
+}
+
+.logo img {
+  height: 100px;
+  margin-top: -18px;
 }
 
 @media (max-width: 768px) {
   .logo {
-    margin-left: 75px;
-    max-height: 30px;
+    margin: auto;
   }
 }
 
@@ -147,12 +156,11 @@ body {
 
 .nav > li > a:hover,
 .nav > li > a:focus {
-  color: black;
-  background-color: #74cb34;
+  background-color: #E5007D;
 }
 
 .nav {
-  margin-top:16px;
+  margin-top: 11px;
 }
 
 /*
@@ -198,7 +206,7 @@ body {
     width: 320px;
     height: 100vh;
     margin-top: 0;
-    background: #105d8a;
+    background: #013755;
     -webkit-transition: all .25s ease-out;
        -moz-transition: all .25s ease-out;
         -ms-transition: all .25s ease-out;
@@ -403,14 +411,6 @@ label.method-checkbox input[type=checkbox] {
 .angular-ui-tree-empty {
     min-height: 0;
     border: none;
-}
-
-.dashboard .hero {
-    margin-top: 2em;
-}
-
-.dashboard .hero img {
-    padding-left: 2em;
 }
 
 h1 {

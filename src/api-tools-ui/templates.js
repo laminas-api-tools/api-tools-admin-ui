@@ -7,10 +7,6 @@ angular.module("api-tools-ui/about/about.html", []).run(["$templateCache", funct
     "    <h3 class=\"panel-title\">Laminas API Tools  {{vm.version}}</h3>\n" +
     "  </div>\n" +
     "  <div class=\"panel-body\">\n" +
-    "    <div class=\"hero pull-right\">\n" +
-    "      <img src=\"api-tools-ui/img/ag-hero.png\">\n" +
-    "    </div>\n" +
-    "\n" +
     "    <p>\n" +
     "      <strong>Laminas API Tools</strong> is the open source API builder for PHP,\n" +
     "      designed to simplify creating and maintaining useful, easy to consume, and\n" +
@@ -22,24 +18,24 @@ angular.module("api-tools-ui/about/about.html", []).run(["$templateCache", funct
     "\n" +
     "    <p>\n" +
     "      <strong>Key features:</strong> RESTful or RPC services; JSON\n" +
-    "      (specifically, <a href=\"http://tools.ietf.org/html/draft-kelly-json-hal-08\" target=\"_blank\">HAL</a>);\n" +
+    "      (specifically, <a href=\"https://tools.ietf.org/html/draft-kelly-json-hal-08\" target=\"_blank\">HAL</a>);\n" +
     "      <a href=\"https://tools.ietf.org/html/rfc7807\" target=\"_blank\">Problem Details for HTTP APIs</a>;\n" +
     "      Versioning; Normalisation and Validation; Authentication (HTTP Basic/Digest,\n" +
-    "      <a href=\"http://oauth.net/2/\" target=\"_blank\">OAuth2</a>); Documentation\n" +
-    "      (HTML, <a href=\"http://swagger.io/\" target=\"_blank\">Swagger</a>, and <a\n" +
+    "      <a href=\"https://oauth.net/2/\" target=\"_blank\">OAuth2</a>); Documentation\n" +
+    "      (HTML, <a href=\"https://swagger.io/\" target=\"_blank\">Swagger</a>, and <a\n" +
     "        href=\"https://apiblueprint.org/\" target=\"_blank\">API Blueprint</a>).\n" +
     "    </p>\n" +
     "\n" +
     "    <p>\n" +
     "      <strong>Laminas API Tools</strong> is made using\n" +
-    "      <a href=\"https://getlaminas.org\" target=\"_blank\">Laminas</a>,\n" +
+    "      <a href=\"https://getlaminas.org/\" target=\"_blank\">Laminas</a>,\n" +
     "      <a href=\"https://angularjs.org/\" target=\"_blank\">AngularJS</a> and\n" +
-    "      <a href=\"http://getbootstrap.com/\" target=\"_blank\">Bootstrap</a>.\n" +
+    "      <a href=\"https://getbootstrap.com/\" target=\"_blank\">Bootstrap</a>.\n" +
     "    </p>\n" +
     "\n" +
     "    <p>\n" +
-    "      If you want to contribute, you can <a href=\"https://github.com/laminascampus\"\n" +
-    "        target=\"_blank\">fork any of the relevant repositories under the laminascampus\n" +
+    "      If you want to contribute, you can <a href=\"https://github.com/laminas-api-tools\"\n" +
+    "        target=\"_blank\">fork any of the relevant repositories under the laminas-api-tools\n" +
     "        organization on GitHub</a>.\n" +
     "    </p>\n" +
     "\n" +
@@ -237,10 +233,6 @@ angular.module("api-tools-ui/dashboard/dashboard.html", []).run(["$templateCache
   $templateCache.put("api-tools-ui/dashboard/dashboard.html",
     "<div class=\"row dashboard\">\n" +
     "  <div class=\"col-xs-12\">\n" +
-    "    <div class=\"hero pull-right\">\n" +
-    "      <img src=\"api-tools-ui/img/ag-hero.png\">\n" +
-    "    </div>\n" +
-    "\n" +
     "    <div>\n" +
     "      <h1>Welcome to Laminas API Tools!</h1>\n" +
     "\n" +
@@ -479,7 +471,7 @@ angular.module("api-tools-ui/header/header.html", []).run(["$templateCache", fun
     "\n" +
     "    <a class=\"logo\" ui-sref=\"ag\"\n" +
     "      ng-click=\"vm.setSelected('')\"><img id=\"logo\"\n" +
-    "      src=\"api-tools-ui/img/logo.png\" alt=\"ApiTools\"></a>\n" +
+    "      src=\"api-tools-ui/img/laminas-api-tools.svg\" alt=\"Laminas API Tools\"></a>\n" +
     "\n" +
     "    <button type=\"button\" class=\"btn btn-info sidebar-toggle\"\n" +
     "      data-toggle=\"sidebar\">\n" +
