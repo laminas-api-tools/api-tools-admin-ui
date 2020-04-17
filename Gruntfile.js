@@ -95,7 +95,7 @@ module.exports = function(grunt) {
       },
       /*
       less: {
-        files: ['<%= api-tools.app %>/less/{,**<delete brackets and this message>/}*.less'],
+        files: ['<%= api_tools.app %>/less/{,**<delete brackets and this message>/}*.less'],
         tasks: ['less:server']
       },
       */
@@ -161,14 +161,14 @@ module.exports = function(grunt) {
       options: {
         // Adds additional paths for import (so can import bower_components as well)
         paths: [
-          '<%= api-tools.app %>/less',
-          '<%= api-tools.app %>/vendor'
+          '<%= api_tools.app %>/less',
+          '<%= api_tools.app %>/vendor'
         ]
       },
       server: {
         files: {
-          '<%= api-tools.app %>/css/main.css': '<%= api-tools.app %>/less/main.less',
-          '<%= api-tools.app %>/css/vendor.css': '<%= api-tools.app %>/less/vendor.less'
+          '<%= api_tools.app %>/css/main.css': '<%= api_tools.app %>/less/main.less',
+          '<%= api_tools.app %>/css/vendor.css': '<%= api_tools.app %>/less/vendor.less'
         },
         options: {
           cleancss: false

@@ -44,7 +44,7 @@ All notable changes to this project will be documented in this file, in reverse 
 
 ### Fixed
 
-- Nothing.
+- [#18](https://github.com/laminas-api-tools/api-tools-admin-ui/pull/18) fixes Laminas API Tools references.
 
 ## 1.3.13 - 2019-11-27
 
