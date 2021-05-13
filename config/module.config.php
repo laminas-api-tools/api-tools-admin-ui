@@ -14,7 +14,7 @@ return [
             ],
         ],
     ],
-    'view_manager' => [
+    'view_manager'  => [
         'template_map' => [
             'api-tools-ui' => __DIR__ . '/../view/api-tools-ui.phtml',
         ],
