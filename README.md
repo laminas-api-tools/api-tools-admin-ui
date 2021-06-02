@@ -1,6 +1,8 @@
 Laminas API Tools Admin UI (develop branch)
 ===================================
 
+[![Build Status](https://github.com/laminas-api-tools/api-tools-admin-ui/actions/workflows/continuous-integration.yml/badge.svg)](https://github.com/laminas-api-tools/api-tools-admin-ui/actions/workflows/continuous-integration.yml)
+
 This is the source code for the new Laminas API Tools Admin User Interface.
 We rewrote from scratch the UI in [AngularJS](https://angularjs.org/) with performance improvement and usability.
 
