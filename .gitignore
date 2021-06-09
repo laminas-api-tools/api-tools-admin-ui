@@ -1,5 +1,4 @@
-.tmp/
-/.phpcs-cache
+/.tmp/
 /vendor/
-node_modules/
-src/vendor/
+/node_modules/
+/src/vendor/

@@ -1,6 +1,7 @@
 {
     "name": "laminas-api-tools/api-tools-admin-ui",
     "description": "Laminas API Tools Admin UI module",
+    "license": "BSD-3-Clause",
     "keywords": [
         "laminas",
         "api-tools",
@@ -8,45 +9,35 @@
         "framework"
     ],
     "homepage": "https://api-tools.getlaminas.org",
-    "license": "BSD-3-Clause",
+    "support": {
+        "docs": "https://api-tools.getlaminas.org/documentation",
+        "issues": "https://github.com/laminas-api-tools/api-tools-admin-ui/issues",
+        "source": "https://github.com/laminas-api-tools/api-tools-admin-ui",
+        "rss": "https://github.com/laminas-api-tools/api-tools-admin-ui/releases.atom",
+        "chat": "https://laminas.dev/chat",
+        "forum": "https://discourse.laminas.dev"
+    },
+    "config": {
+        "sort-packages": true
+    },
     "require": {
-        "php": "^7.3",
+        "php": "^7.3 || ~8.0.0",
         "laminas/laminas-view": "^2.8.1",
         "laminas/laminas-zendframework-bridge": "^1.0"
     },
-    "replace": {
-        "zfcampus/zf-apigility-admin-ui": "^1.3.13"
-    },
     "require-dev": {
-        "laminas/laminas-coding-standard": "~2.1.0",
         "laminas/laminas-console": "^2.6"
     },
     "suggest": {
         "laminas-api-tools/api-tools-asset-manager": "^1.0, to expose assets under the document root, until rwoverdijk/assetmanager 1.7 is released",
         "rwoverdijk/assetmanager": "^1.7, to expose assets under the document root (may not yet be released)"
     },
-    "config": {
-        "sort-packages": true
-    },
-    "extra": {},
     "autoload": {
         "classmap": [
             "Module.php"
         ]
     },
-    "scripts": {
-        "check": [
-            "@cs-check"
-        ],
-        "cs-check": "phpcs --colors",
-        "cs-fix": "phpcbf --colors"
-    },
-    "support": {
-        "issues": "https://github.com/laminas-api-tools/api-tools-admin-ui/issues",
-        "forum": "https://discourse.laminas.dev",
-        "chat": "https://laminas.dev/chat",
-        "source": "https://github.com/laminas-api-tools/api-tools-admin-ui",
-        "docs": "https://api-tools.getlaminas.org/documentation",
-        "rss": "https://github.com/laminas-api-tools/api-tools-admin-ui/releases.atom"
+    "replace": {
+        "zfcampus/zf-apigility-admin-ui": "^1.3.13"
     }
 }
