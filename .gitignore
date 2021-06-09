@@ -1,5 +1,4 @@
 .tmp/
-/composer.lock
 /vendor/
 node_modules/
 src/vendor/
