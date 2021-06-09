@@ -20,10 +20,8 @@
     "config": {
         "sort-packages": true
     },
-    "extra": {
-    },
     "require": {
-        "php": "^7.3",
+        "php": "^7.3 || ~8.0.0",
         "laminas/laminas-view": "^2.8.1",
         "laminas/laminas-zendframework-bridge": "^1.0"
     },
