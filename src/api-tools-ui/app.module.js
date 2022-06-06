@@ -13,7 +13,6 @@
       'api-tools.authentication',
       'api-tools.database',
       'api-tools.documentation',
-      'api-tools.package',
       'api-tools.about',
 
       'ngSanitize',

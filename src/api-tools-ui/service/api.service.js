@@ -934,31 +934,6 @@
         });
     };
 
-    this.buildPackage = function(build, apis, callback) {
-      var allowed = [ 'format', 'apis', 'composer', 'config', 'zpk_xml', 'zpk_assets', 'zpk_version' ];
-      var selectApis = {};
-      apis.forEach(function(entry){
-        selectApis[entry.name] = build.modules.indexOf(entry.name) >= 0;
-      });
-      var data = [ build.format, selectApis, build.composer, build.config ];
-      if (build.format === 'zpk') {
-        data.push.apply(data, [ build.zpk.xml, build.zpk.assets, build.zpk.version ]);
-      }
-      xhr.create(agApiPath + '/package', data, allowed)
-        .then(function (response) {
-          if (!response) {
-            growl.error('Error occurred when building package', {ttl: -1});
-            return callback(true, 'Error occurred building the package');
-          }
-          growl.success('Package creation initiated');
-          return callback(false, response);
-        })
-        .catch(function (err) {
-          growl.error('Error occurred when building package', {ttl: -1});
-          return callback(true, 'Error occurred building the package');
-        });
-    };
-
     this.getAuthenticationAdapters = function(callback) {
       xhr.get(agApiPath + '/authentication', '_embedded', 2)
         .then(function (response) {
