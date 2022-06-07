@@ -72,10 +72,5 @@ describe('Laminas API Tools: Module Exists', function () {
       /*jshint expr: true */
       expect(hasModule('api-tools.documentation')).toBe(true);
     });
-
-    it('should have api-tools.package as a dependency', function() {
-      /*jshint expr: true */
-      expect(hasModule('api-tools.package')).toBe(true);
-    });
   });
 });

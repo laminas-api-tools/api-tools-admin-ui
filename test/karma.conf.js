@@ -38,7 +38,6 @@ module.exports = function(config) {
       //'src/api-tools-ui/authentication/**/*.js',
       //'src/api-tools-ui/database/**/*.js',
       //'src/api-tools-ui/documentation/**/*.js',
-      //'src/api-tools-ui/package/**/*.js',
       //'src/api-tools-ui/service/**/*.js',
 
       'test/unit/**/*.js'

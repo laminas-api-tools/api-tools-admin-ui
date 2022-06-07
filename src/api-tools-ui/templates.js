@@ -1,4 +1,4 @@
-angular.module('templates-main', ['api-tools-ui/about/about.html', 'api-tools-ui/api-module/api-module.html', 'api-tools-ui/authentication/authentication.html', 'api-tools-ui/content-negotiation/content-negotiation.html', 'api-tools-ui/dashboard/dashboard.html', 'api-tools-ui/database/database.html', 'api-tools-ui/documentation/documentation-api.html', 'api-tools-ui/documentation/documentation-list.html', 'api-tools-ui/documentation/documentation-service.html', 'api-tools-ui/documentation/documentation.html', 'api-tools-ui/header/header.html', 'api-tools-ui/modal/add-authoption.html', 'api-tools-ui/modal/add-dboption.html', 'api-tools-ui/modal/add-filter.html', 'api-tools-ui/modal/add-service-description.html', 'api-tools-ui/modal/add-validator.html', 'api-tools-ui/modal/delete-api.html', 'api-tools-ui/modal/delete-auth.html', 'api-tools-ui/modal/delete-authoption.html', 'api-tools-ui/modal/delete-db.html', 'api-tools-ui/modal/delete-dboption.html', 'api-tools-ui/modal/delete-field.html', 'api-tools-ui/modal/delete-filter.html', 'api-tools-ui/modal/delete-rest.html', 'api-tools-ui/modal/delete-rpc.html', 'api-tools-ui/modal/delete-selector.html', 'api-tools-ui/modal/delete-validator.html', 'api-tools-ui/modal/delete-viewmodel.html', 'api-tools-ui/modal/edit-auth.html', 'api-tools-ui/modal/edit-authoption.html', 'api-tools-ui/modal/edit-db.html', 'api-tools-ui/modal/edit-dboption.html', 'api-tools-ui/modal/edit-field.html', 'api-tools-ui/modal/edit-filter.html', 'api-tools-ui/modal/edit-validator.html', 'api-tools-ui/modal/edit-viewmodel.html', 'api-tools-ui/modal/new-api.html', 'api-tools-ui/modal/new-auth.html', 'api-tools-ui/modal/new-db.html', 'api-tools-ui/modal/new-doctrinestrategy.html', 'api-tools-ui/modal/new-field.html', 'api-tools-ui/modal/new-selector.html', 'api-tools-ui/modal/new-service.html', 'api-tools-ui/modal/new-version.html', 'api-tools-ui/modal/new-viewmodel.html', 'api-tools-ui/modal/view-doctrineparams.html', 'api-tools-ui/package/package.html', 'api-tools-ui/rest/rest.html', 'api-tools-ui/rpc/rpc.html', 'api-tools-ui/sidebar/sidebar.html']);
+angular.module('templates-main', ['api-tools-ui/about/about.html', 'api-tools-ui/api-module/api-module.html', 'api-tools-ui/authentication/authentication.html', 'api-tools-ui/content-negotiation/content-negotiation.html', 'api-tools-ui/dashboard/dashboard.html', 'api-tools-ui/database/database.html', 'api-tools-ui/documentation/documentation-api.html', 'api-tools-ui/documentation/documentation-list.html', 'api-tools-ui/documentation/documentation-service.html', 'api-tools-ui/documentation/documentation.html', 'api-tools-ui/header/header.html', 'api-tools-ui/modal/add-authoption.html', 'api-tools-ui/modal/add-dboption.html', 'api-tools-ui/modal/add-filter.html', 'api-tools-ui/modal/add-service-description.html', 'api-tools-ui/modal/add-validator.html', 'api-tools-ui/modal/delete-api.html', 'api-tools-ui/modal/delete-auth.html', 'api-tools-ui/modal/delete-authoption.html', 'api-tools-ui/modal/delete-db.html', 'api-tools-ui/modal/delete-dboption.html', 'api-tools-ui/modal/delete-field.html', 'api-tools-ui/modal/delete-filter.html', 'api-tools-ui/modal/delete-rest.html', 'api-tools-ui/modal/delete-rpc.html', 'api-tools-ui/modal/delete-selector.html', 'api-tools-ui/modal/delete-validator.html', 'api-tools-ui/modal/delete-viewmodel.html', 'api-tools-ui/modal/edit-auth.html', 'api-tools-ui/modal/edit-authoption.html', 'api-tools-ui/modal/edit-db.html', 'api-tools-ui/modal/edit-dboption.html', 'api-tools-ui/modal/edit-field.html', 'api-tools-ui/modal/edit-filter.html', 'api-tools-ui/modal/edit-validator.html', 'api-tools-ui/modal/edit-viewmodel.html', 'api-tools-ui/modal/new-api.html', 'api-tools-ui/modal/new-auth.html', 'api-tools-ui/modal/new-db.html', 'api-tools-ui/modal/new-doctrinestrategy.html', 'api-tools-ui/modal/new-field.html', 'api-tools-ui/modal/new-selector.html', 'api-tools-ui/modal/new-service.html', 'api-tools-ui/modal/new-version.html', 'api-tools-ui/modal/new-viewmodel.html', 'api-tools-ui/modal/view-doctrineparams.html', 'api-tools-ui/rest/rest.html', 'api-tools-ui/rpc/rpc.html', 'api-tools-ui/sidebar/sidebar.html']);
 
 angular.module("api-tools-ui/about/about.html", []).run(["$templateCache", function($templateCache) {
   $templateCache.put("api-tools-ui/about/about.html",
@@ -485,7 +485,6 @@ angular.module("api-tools-ui/header/header.html", []).run(["$templateCache", fun
     "    <li role=\"presentation\" ng-class=\"{active: ('ag.authentication' | includedByState)}\"><a ui-sref=\"ag.authentication\" ng-click=\"vm.setSelected('')\">Authentication</a></li>\n" +
     "    <li role=\"presentation\" ng-class=\"{active: ('ag.database' | includedByState)}\"><a ui-sref=\"ag.database\" ng-click=\"vm.setSelected('')\">Database</a></li>\n" +
     "    <li role=\"presentation\" ng-class=\"{active: ('ag.documentation' | includedByState)}\"><a ui-sref=\"ag.documentation({api : null, ver : null})\" ng-click=\"vm.setSelected('')\">Documentation</a></li>\n" +
-    "    <li role=\"presentation\" ng-class=\"{active: ('ag.package' | includedByState)}\"><a ui-sref=\"ag.package\" ng-click=\"vm.setSelected('')\">Package</a></li>\n" +
     "    <li role=\"presentation\" ng-class=\"{active: ('ag.about' | includedByState)}\"><a ui-sref=\"ag.about\" ng-click=\"vm.setSelected('')\">About</a></li>\n" +
     "  </ul>\n" +
     "</nav>\n" +
@@ -1869,82 +1868,6 @@ angular.module("api-tools-ui/modal/view-doctrineparams.html", []).run(["$templat
     "</div>\n" +
     "<div class=\"modal-footer\">\n" +
     "  <button type=\"button\" class=\"btn btn-default btn-sm\" ng-click=\"vm.ok()\">Close</button>\n" +
-    "</div>\n" +
-    "");
-}]);
-
-angular.module("api-tools-ui/package/package.html", []).run(["$templateCache", function($templateCache) {
-  $templateCache.put("api-tools-ui/package/package.html",
-    "<div class=\"panel panel-default\">\n" +
-    "  <div class=\"panel-heading\">\n" +
-    "    <h3 class=\"panel-title\">Package</h3>\n" +
-    "  </div>\n" +
-    "  <div class=\"panel-body\">\n" +
-    "    <div class=\"alert alert-danger\" role=\"alert\" ng-hide=\"!vm.alert\">\n" +
-    "      <span class=\"glyphicon glyphicon-exclamation-sign\" aria-hidden=\"true\"></span> {{vm.alert}}\n" +
-    "    </div>\n" +
-    "    <form class=\"form-horizontal\" role=\"form\" unsaved-warning-form ng-hide=\"vm.apis.length == 0\">\n" +
-    "      <p>Package your API for deployment! This tool will build a deployment file in the format you specify (ZIP, TAR, TGZ or ZPK). For more information about deploying Laminas API Tools projects <a href=\"https://api-tools.getlaminas.org/documentation/deployment/intro\" target=\"_blank\">read the documentation</a>.</p>\n" +
-    "      <br />\n" +
-    "      <div class=\"form-group\">\n" +
-    "        <label class=\"col-sm-3 control-label\">Package format</label>\n" +
-    "        <div class=\"col-sm-2\">\n" +
-    "          <select class=\"form-control\" ng-model=\"vm.package.format\" ng-options=\"format for format in vm.formats\" ng-disabled=\"vm.loading\"></select>\n" +
-    "        </div>\n" +
-    "        <div class=\"col-sm-6\">\n" +
-    "          <span class=\"help-block\"><span class=\"glyphicon glyphicon-info-sign\" aria-hidden=\"true\"></span> ZPK packages are for deployment on <a href=\"https://www.zend.com/en/products/server\" target=\"_blank\">Zend Server</a></span>\n" +
-    "        </div>\n" +
-    "      </div>\n" +
-    "      <div class=\"form-group\">\n" +
-    "        <label class=\"col-sm-3 control-label\">APIs to include in the package</label>\n" +
-    "        <div class=\"col-sm-8\">\n" +
-    "          <span ng-repeat=\"api in vm.apis\">\n" +
-    "            <input type=\"checkbox\" checklist-model=\"vm.package.modules\" checklist-value=\"api.name\" ng-change=\"vm.change()\" ng-disabled=\"vm.loading\"> {{api.name}}\n" +
-    "          </span>\n" +
-    "        </div>\n" +
-    "      </div>\n" +
-    "      <div class=\"form-group\">\n" +
-    "        <label class=\"col-sm-3 control-label\">Execute composer?</label>\n" +
-    "        <div class=\"col-sm-2\">\n" +
-    "          <input type=\"checkbox\" ng-model=\"vm.package.composer\" ng-disabled=\"vm.loading\"><br />\n" +
-    "        </div>\n" +
-    "      </div>\n" +
-    "      <div class=\"form-group\">\n" +
-    "        <label class=\"col-sm-3 control-label\">Application config to include</label>\n" +
-    "        <div class=\"col-sm-8\">\n" +
-    "          <input type=\"text\" class=\"form-control\" ng-model=\"vm.package.config\" placeholder=\"Insert the path of the config files to include\" ng-disabled=\"vm.loading\"><br />\n" +
-    "        </div>\n" +
-    "      </div>\n" +
-    "      <div class=\"panel panel-default\" ng-if=\"vm.package.format === 'ZPK'\">\n" +
-    "        <div class=\"panel-heading\">Zend Server ZPK options</div>\n" +
-    "        <div class=\"panel-body\">\n" +
-    "          <div class=\"form-group\">\n" +
-    "            <label class=\"col-sm-3 control-label\">Path to a custom deployment.xml</label>\n" +
-    "            <div class=\"col-sm-8\">\n" +
-    "              <input type=\"text\" class=\"form-control\" ng-model=\"vm.package.zpk.xml\" placeholder=\"Insert the path of deployment.xml (optional)\" ng-disabled=\"vm.loading\"><br />\n" +
-    "            </div>\n" +
-    "          </div>\n" +
-    "          <div class=\"form-group\">\n" +
-    "            <label class=\"col-sm-3 control-label\">Directory containing ZPK package assets (deployment.xml, scripts)</label>\n" +
-    "            <div class=\"col-sm-8\">\n" +
-    "              <input type=\"text\" class=\"form-control\" ng-model=\"vm.package.zpk.assets\" placeholder=\"Insert the path of directory containing ZPK package assets (optional)\" ng-disabled=\"vm.loading\"><br />\n" +
-    "            </div>\n" +
-    "          </div>\n" +
-    "          <div class=\"form-group\">\n" +
-    "            <label class=\"col-sm-3 control-label\">Application version</label>\n" +
-    "            <div class=\"col-sm-8\">\n" +
-    "              <input type=\"text\" class=\"form-control\" ng-model=\"vm.package.zpk.version\" placeholder=\"Insert the application version to be used in ZPK package (optional)\" ng-disabled=\"vm.loading\"><br />\n" +
-    "            </div>\n" +
-    "          </div>\n" +
-    "        </div>\n" +
-    "      </div>\n" +
-    "      <div class=\"form-group\" style=\"margin-top:30px\">\n" +
-    "        <div class=\"col-sm-offset-3\">\n" +
-    "          <button type=\"submit\" class=\"btn btn-success\" ladda=\"vm.loading\" ng-click=\"vm.buildPackage()\">Generate package</button> <span ng-show=\"vm.loading && vm.package.composer\" style=\"color:gray\">Please wait, the building process can take some time <span ng-show=\"vm.package.time\">(last build took {{vm.package.time}} sec)</span></span>\n" +
-    "        </div>\n" +
-    "      </div>\n" +
-    "    </form>\n" +
-    "  </div>\n" +
     "</div>\n" +
     "");
 }]);

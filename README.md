@@ -26,7 +26,6 @@ We added some new features:
 
 - Doctrine support for DB connected REST service;
 - DB autodiscovering for table and fields;
-- Build package API file, ready for deployment (develop in progress, see [TODO list](TODO.md));
 - Per-API authentication (develop in progress, see [TODO list](TODO.md));
 
 > **Note**
